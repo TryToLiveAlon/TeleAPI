@@ -1,0 +1,36 @@
+---
+title: Generate App Password
+description: This Page is not related to Mailer. It is for one of the important parameter that will help you to make request to our API. If you know about App password then skip this page.
+---
+
+## Guide
+
+- **App password** - Here is a video which will [[**Guide**]](https://www.youtube.com/watch?v=4gE4f3Qq6K8) you how to create a **App password**.
+- **Important Steps** - Some of the important steps are listed below go and follow them.
+
+### Steps
+<Stepper>
+  <StepperItem title="Step 1: Enable 2-Step Verification">
+      To generate an App Password in Gmail, you first need to enable **2-Step Verification** on your Google account. Go to [Google Account Security](https://myaccount.google.com/security) and under the "Signing in to Google" section, enable **2-Step Verification** if it is not already activated.
+        </StepperItem>
+
+          <StepperItem title="Step 2: Access App Passwords">
+              Once 2-Step Verification is enabled, navigate to the [App Passwords](https://myaccount.google.com/apppasswords) page. If prompted, log in to your Google account again for security purposes.
+                </StepperItem>
+
+                  <StepperItem title="Step 3: Generate a New App Password">
+                      In the **App Passwords** section, select the app and device you want to generate a password for. Since we are setting up email sending via **nodemailer**, choose **Mail** as the app and select **Other (Custom name)** for the device.
+                        </StepperItem>
+
+                          <StepperItem title="Step 4: Copy and Use the App Password">
+                              Click the **Generate** button, and a 16-character password will be displayed. Copy this password and use it in your email-sending script as the authentication password instead of your actual Google account password.
+                                </StepperItem>
+                                </Stepper>
+---
+
+<Note type="success" title="Success">
+After following the video or these steps you will get a **16 letter string** which will be **visible only for once** so save it somewhere special place.
+</Note>
+
+## Next Step
+Now you are ready to use Mailer without inturption of any error to login.Now we you can use the basic fetures now move on to the advance fetures.

@@ -1,0 +1,72 @@
+---
+title: Request
+description: This page will lead you to how to use the basic paramter and advance parameter for your peoject.
+---
+
+## First Request 
+
+To send the first request to our Mailer API, we need an **HTTPS client** that allows us to communicate with the server. In **Python**, we can use the `requests` library, while in **Node.js**, we can use `node-fetch` or `axios`.
+
+However, for API documentation and testing, we will be using [**Hoppscotch**](https://hoppscotch.io), a powerful and developer-friendly API testing tool. Hoppscotch provides a clean and intuitive GUI, making it easier to send, test, and debug API requests. It helps in managing API keys, request history tracking, and the ability to save and organize API calls seamlessly. 
+
+### Steps
+
+<Stepper>
+<StepperItem title="Step 1: The Base URL">
+First load the Base URL in the code copy from here then paste.
+```plaintext
+https://carflow-mocha.vercel.app/api/mail
+```
+</StepperItem>
+
+<StepperItem title="Step 2: Make The payload">
+Then create the code for giving the request you can use both `GET`/`POST` as this Mailer support both.
+The **basic** payload look like this in `application/json`
+
+```json
+{
+ "from": "your_gmail@gmail.com",
+ "password": "xxxx xxxx xxxx xxxx",
+ "to": "yamavog725@cybtric.com",
+ "subject": "Hello from API!",
+ "content":"Hi"
+}
+```
+---
+</StepperItem>
+
+<StepperItem title="Step 3: Response">
+After a successful request to the API you will get a successful json.
+like below the one
+
+```json
+{
+ "success": true,
+ "messageId": "<<random-unique-id-of-message>@gmail.com>",
+ "IMPORTANT": {
+               "provider": "https://t.me/TryToLiveAlone",
+               "documentation": "This website"
+              }
+}
+```
+
+</StepperItem>
+</Stepper>
+---
+
+<Note type="warning" title="Warning">
+Please Dont use `GET` in application which can be **seen or inspected** by user otherwise it may **expose your credentials**.
+Use `POST` request in those case. If anything happens with the credentials.The **developer is not responsible** it's your prime duty to make your credentials safe.
+</Note>
+
+## Things To know
+
+This was In the request basic Handling.Now let us go forward with some security measures in this API.
+
+- **App Password** - It is a **16 letter string** it's different from normal gmail password you need this to login in some applications.
+- **Spam** - We don't provide default mail because the reason of **spam** and **abuse**,But you can use you own it is **110% safe**.
+- **Record keeping** - Mailer don't have any **kind of database** therefore no iser data is tracked.
+
+Struggling erating in making or finding app password of gmail account.Then the next page for you move on to the next page then comeback to this page.
+
+

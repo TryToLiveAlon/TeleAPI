@@ -1,0 +1,118 @@
+---
+title: XML feature
+description: This is Mailer extra and unique feture. We will be discussing About this in the whole page.
+---
+
+This whole page is dedicated for one of the parameter `xmlUrl` in which the user provide a xml template link like [[**this**]](https://github.com/TryToLiveAlon/TemplateForGmail/blob/main/demohtml.xml) for making professional mails.
+
+## The advance Parameter
+
+There are three main advance parameter `isHtml`,`xmlUrl` and `useTemplate`. By default `isHtml` value is false. If `useTemplate` is true only then the xml template will be used for your better understanding we have a example.
+
+### Example
+
+So I have a payload for my request in which I have used the Demo template available on [Github](https://github.com/TryToLiveAlon/TemplateForGmail).
+
+```json
+{
+  "from": "uk325346@gmail.com",
+  "password": "xxxx xxxx xxxx xxxx",
+  "to": "receiver@gmail.com",
+  "subject": "Test Email",
+  "isHtml": "true",
+  "useTemplate": "true",
+  "xmlUrl": "https://raw.githubusercontent.com/TryToLiveAlon/TemplateForGmail/refs/heads/main/demohtml.xml",
+  "name": "jhonny",
+  "otp": "2467645"
+}
+```
+
+---
+
+### Extra parameter
+
+If you notice the payload you will see two extra key `name` and `otp`.This is the unique feature of the API dynamic replacment.
+For better understanding you need to look at the xml code.
+
+```xml
+<email>
+    <template>
+            <![CDATA[
+                    <html>
+                         <head>
+                           <style>
+                             body {
+                                   font-family: Arial, sans-serif;
+                                   background-color: #f4f4f4;
+                                   padding: 20px;
+                                   text-align: center;
+                                  }
+                             .container {
+                                         background-color: #ffffff;
+                                         padding: 20px;
+                                         border-radius: 10px;
+                                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                                        }
+                             h1 {
+                                 color: #333;
+                                }
+                             p {
+                                font-size: 16px;
+                                color: #555;
+                               }
+                            .button {
+                                     background-color: #008CBA;
+                                     color: white;
+                                     padding: 10px 20px;
+                                     text-decoration: none;
+                                     border-radius: 5px;
+                                     display: inline-block;
+                                     margin-top: 20px;
+                                    }
+                            </style>
+                            </head>
+                              <body>
+                                    <div class="container">
+                                    <h1>Welcome, {name}!</h1>
+                                    <p>We are excited {otp} to have you on board. Stay tuned for updates.</p>
+                                    <a class="button" href="https://example.com">Visit Our Website</a>
+                                    </div>
+                              </body>
+                        </html>
+                 ]]>
+     </template>
+</email>
+```
+
+---
+
+You will notice two objects in `{}` brackets. These are called extra parameter in our API context these are parsed normally until the same key have been parsed in the request.If the payload have the value then the Mailer will change value and something like this will be received.
+
+![Output](https://i.ibb.co/bjJB66Zq/IMG-20250319-WA0061.jpg)
+
+---
+
+## Doubt
+
+### But what if the extra parameter is not given ?
+
+In this case Mailer will send without any disturbance to the message.
+For understanding
+
+```json
+{
+  "from": "sender@gmail.com",
+  "password": "xxxx xxxx xxxx xxxx",
+  "to": "yamavog725@cybtric.com",
+  "subject": "Test Email",
+  "isHtml": "true",
+  "useTemplate": "true",
+  "xmlUrl": "https://raw.githubusercontent.com/TryToLiveAlon/TemplateForGmail/refs/heads/main/demohtml.xml"
+}
+```
+
+Then output will be the below results.
+
+![Output2](https://i.ibb.co/m5kc4NPk/IMG-20250320-WA0000.jpg)
+
+So I hope you got the point of the Extra parameter. Now you need to construct your own xml then move on to the next page see you there.

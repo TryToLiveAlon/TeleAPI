@@ -27,7 +27,7 @@ export const NAVLINKS = [
   },
   {
     title: "Community",
-    href: "https://github.com/nisabmohd/Aria-Docs/discussions",
+    href: "https://t.me/TryToLiveAlon",
   },
 ];
 
@@ -58,7 +58,7 @@ export function Navbar() {
           <div className="flex items-center justify-between sm:gap-2">
             <div className="flex ml-4 sm:ml-0">
               <Link
-                href="https://github.com/nisabmohd/NexDocs"
+                href="https://github.com/BotDevFather"
                 className={buttonVariants({
                   variant: "ghost",
                   size: "icon",
@@ -67,7 +67,7 @@ export function Navbar() {
                 <GithubIcon className="h-[1.1rem] w-[1.1rem]" />
               </Link>
               <Link
-                href="#"
+                href="https://x.com/BotDevFather"
                 className={buttonVariants({
                   variant: "ghost",
                   size: "icon",
@@ -88,7 +88,7 @@ export function Logo() {
   return (
     <Link href="/" className="flex items-center gap-2.5">
       <CommandIcon className="w-6 h-6 text-muted-foreground" strokeWidth={2} />
-      <h2 className="text-md font-bold font-code">AriaDocs</h2>
+      <h2 className="text-md font-bold font-code">TeleAPI</h2>
     </Link>
   );
 }
