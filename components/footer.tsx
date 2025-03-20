@@ -39,7 +39,7 @@ export function FooterButtons() {
   return (
     <>
       <Link
-        href="https://t.me/TryToLiveAlon"
+        href="https://t.me/TeleAPI_services"
         className={buttonVariants({ variant: "outline", size: "sm" })}
       >
         <TriangleIcon className="h-[0.8rem] w-4 mr-2 text-primary fill-current" />
