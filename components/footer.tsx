@@ -40,15 +40,11 @@ export function FooterButtons() {
     <>
       <Link
         href="https://t.me/TryToLiveAlon"
-          className={buttonVariants({ variant: "outline", size: "sm" })}
-          >
-            <img
-                src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg"
-                    alt="Telegram Logo"
-                        className="h-[0.8rem] w-4 mr-2"
-                          />
-                            Support Channel 
-                            </Link>
+        className={buttonVariants({ variant: "outline", size: "sm" })}
+      >
+        <TriangleIcon className="h-[0.8rem] w-4 mr-2 text-primary fill-current" />
+        Support Channel
+      </Link>
       <Link
         href="https://paytodeath.vercel.app/"
         className={buttonVariants({ variant: "outline", size: "sm" })}
