@@ -26,7 +26,6 @@ export const ROUTES: EachRoute[] = [
           { title: "Get App Password", href: "/get-app-password" },
           { title: "XML feature", href: "/xml-feature" },
           { title: "XML making", href: "/xml-making" },
-          { title: "Error description", href: "/error-description" },
         ],
       },
     ],
