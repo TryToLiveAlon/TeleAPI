@@ -19,6 +19,7 @@ export const ROUTES: EachRoute[] = [
         title: "Mailer",
         href: "/mailer",
         noLink: true,
+        tag: "New",
         items: [
           { title: "Introduction", href: "/introduction" },
           { title: "Requesting", href: "/requesting" },
@@ -27,12 +28,6 @@ export const ROUTES: EachRoute[] = [
           { title: "XML making", href: "/xml-making" },
           { title: "Error description", href: "/error-description" },
         ],
-      },
-      { title: "Algolia Search", href: "/algolia-search", tag: "New" },
-      { title: "Themes", href: "/themes" },
-      {
-        title: "Customize",
-        href: "/customize",
       },
     ],
   },
